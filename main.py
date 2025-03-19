@@ -6,7 +6,7 @@ import random
 app = FastAPI()
 
 # Mount static files (CSS, JS)
-app.mount("/static", StaticFiles(directory="static"), name="static")
+app.mount("/static", StaticFiles(directory=static_dir), name="static")
 templates = Jinja2Templates(directory="templates")
 
 # Chatbot responses with multiple natural conversation styles
